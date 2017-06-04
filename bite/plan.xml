@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<!-- Configuration file for plan definition -->
+<!-- Define the nodes and the edges of the plan here -->
+<data>
+    <!-- Definition of nodes -->
+    <nodes>
+        <!-- Each node must have a behavior name, an allocate method and a vote method -->
+        <node nodeName="node1">
+            <behaviorName>Behavior1</behaviorName>
+            <allocateMethod>allocate</allocateMethod>
+            <voteMethod>vote</voteMethod>
+            <preCond>precond1</preCond>
+            <termCond>termcond1</termCond>
+        </node>
+        <!-- When not needed, allocate/vote methods can be empty -->
+        <node nodeName="node1.1">
+            <behaviorName>Behavior1_1</behaviorName>
+            <allocateMethod/>
+            <voteMethod/>
+            <preCond>precond1.1</preCond>
+            <termCond>termcond1.1</termCond>
+        </node>
+        <!-- A node can have more than one pre/term conditions -->
+        <node nodeName="node1.2">
+            <behaviorName>Behavior1_2</behaviorName>
+            <allocateMethod>allocate</allocateMethod>
+            <voteMethod>vote</voteMethod>
+            <preCond>precond1.2</preCond>
+            <preCond>precond1.22</preCond>
+            <termCond>termcond1.2</termCond>
+        </node>
+        <!-- Allocate/vote methods can be different between different nodes -->
+         <node nodeName="node2">
+            <behaviorName>Behavior2</behaviorName>
+            <allocateMethod>different_allocate_method</allocateMethod>
+            <voteMethod>vote</voteMethod>
+            <preCond>precond2</preCond>
+            <termCond>termcond2</termCond>
+        </node>
+        <!-- A node can have no pre/term conditions at all -->
+         <node nodeName="node2.1">
+            <behaviorName>Behavior2_1</behaviorName>
+            <allocateMethod>allocate</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+    </nodes>
+
+    <!-- Definition of hierarchical edges -->
+    <heirarchicalEdges>
+        <heirarchicalEdge from="node1" to="node1.1"/>
+        <heirarchicalEdge from="node1" to="node1.2"/>
+        <heirarchicalEdge from="node2" to="node2.1"/>
+    </heirarchicalEdges>
+
+    <!-- Definition of sequential edges -->
+    <sequentialEdges>
+        <sequentialEdge from="node1" to="node2"/>
+        <!-- Self sequential edge -->
+        <sequentialEdge from="node1" to="node1"/>
+    </sequentialEdges>
+</data>
+

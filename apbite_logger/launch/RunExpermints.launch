@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+<launch>
+<arg name="file_path" default="$(find apbite_logger)/experiments"/>
+<arg name="batch_number" default="1"/>
+<arg name="number_of_targets" default="3"/>
+<arg name="world" default="0"/>
+<arg name="serial_num" default="0"/>
+<arg name="method" default=""/>
+<arg name="APBITE" default="false"/>
+<arg name="opt" default="false"/>
+<arg name="lookup" default="false"/>
+<arg name="lookdown" default="false"/>
+<arg name="world1" default="false"/>
+<arg name="world2" default="false"/>
+<arg name="world3" default="false"/>
+<arg name="world4" default="false"/>
+<arg name="world5" default="false"/>
+<arg name="world6" default="false"/>
+<arg name="secs_to_miss_ObstacleOnTheWay" default="-1.0"/>
+<arg name="secs_to_miss_KnowsTargetLocation" default="-1.0"/>
+
+<include file="$(find apbite_logger)/launch/apbite_logger.launch">
+	<arg name="file_path" value="$(arg file_path)"/>
+	<arg name="batch_number" value="$(arg batch_number)"/>
+	<arg name="number_of_targets" value="$(arg number_of_targets)"/>
+	<arg name="world" value="$(arg world)"/>
+	<arg name="serial_num" value="$(arg serial_num)"/>
+	<arg name="method" value="$(arg method)"/>  <!--opt/APBITE/lookdown/lookup-->
+	<arg name="secs_to_miss_ObstacleOnTheWay" value="$(arg secs_to_miss_ObstacleOnTheWay)"/>
+    <arg name="secs_to_miss_KnowsTargetLocation" value="$(arg secs_to_miss_KnowsTargetLocation)"/>
+</include>
+
+
+<!-- true location reslut logger -->
+<include file="$(find bite_drive_between_targets)/launch/bite_drive_between_targets.launch" if="$(arg APBITE)">
+    <arg name="method" value="apbite"/>
+    <arg name="world1" value="$(arg world1)"/>
+    <arg name="world2" value="$(arg world2)"/>
+    <arg name="world3" value="$(arg world3)"/>
+    <arg name="world4" value="$(arg world4)"/>
+    <arg name="world5" value="$(arg world5)"/>
+    <arg name="world6" value="$(arg world6)"/>
+    <arg name="secs_to_miss_ObstacleOnTheWay" value="$(arg secs_to_miss_ObstacleOnTheWay)"/>
+    <arg name="secs_to_miss_KnowsTargetLocation" value="$(arg secs_to_miss_KnowsTargetLocation)"/>
+</include>
+
+<include file="$(find bite_drive_between_targets)/launch/bite_drive_between_targets.launch" if="$(arg opt)">
+    <arg name="method" value="opt"/>
+    <arg name="world1" value="$(arg world1)"/>
+    <arg name="world2" value="$(arg world2)"/>
+    <arg name="world3" value="$(arg world3)"/>
+    <arg name="world4" value="$(arg world4)"/>
+    <arg name="world5" value="$(arg world5)"/>
+    <arg name="world6" value="$(arg world6)"/>
+    <arg name="secs_to_miss_ObstacleOnTheWay" value="$(arg secs_to_miss_ObstacleOnTheWay)"/>
+    <arg name="secs_to_miss_KnowsTargetLocation" value="$(arg secs_to_miss_KnowsTargetLocation)"/>
+</include>
+
+<include file="$(find bite_drive_between_targets)/launch/bite_drive_between_targets.launch" if="$(arg lookup)">
+    <arg name="method" value="lookup"/>
+    <arg name="world1" value="$(arg world1)"/>
+    <arg name="world2" value="$(arg world2)"/>
+    <arg name="world3" value="$(arg world3)"/>
+    <arg name="world4" value="$(arg world4)"/>
+    <arg name="world5" value="$(arg world5)"/>
+    <arg name="world6" value="$(arg world6)"/>
+    <arg name="secs_to_miss_ObstacleOnTheWay" value="$(arg secs_to_miss_ObstacleOnTheWay)"/>
+    <arg name="secs_to_miss_KnowsTargetLocation" value="$(arg secs_to_miss_KnowsTargetLocation)"/>
+</include>
+
+<include file="$(find bite_drive_between_targets)/launch/bite_drive_between_targets.launch" if="$(arg lookdown)">
+    <arg name="method" value="lookdown"/>
+    <arg name="world1" value="$(arg world1)"/>
+    <arg name="world2" value="$(arg world2)"/>
+    <arg name="world3" value="$(arg world3)"/>
+    <arg name="world4" value="$(arg world4)"/>
+    <arg name="world5" value="$(arg world5)"/>
+    <arg name="world6" value="$(arg world6)"/>
+    <arg name="secs_to_miss_ObstacleOnTheWay" value="$(arg secs_to_miss_ObstacleOnTheWay)"/>
+    <arg name="secs_to_miss_KnowsTargetLocation" value="$(arg secs_to_miss_KnowsTargetLocation)"/>
+</include>
+
+</launch>
+
+

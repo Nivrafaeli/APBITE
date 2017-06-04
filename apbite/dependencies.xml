@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<!-- Definition of relevant knowledge for behaviors -->
+<!-- For each behavior define here which knowledge is relevant to it -->
+<data>
+    <behavior name="Behavior1">
+        <dependency>key1</dependency>
+        <dependency>key2</dependency>
+    </behavior>
+    <behavior name="Behavior2">
+        <dependency>key1</dependency>
+        <dependency>key3</dependency>
+    </behavior>
+</data>
+

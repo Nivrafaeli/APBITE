@@ -1,0 +1,126 @@
+Batch, World, Method, Experiment, #obstacles passed, #obstacles identified, #targets passed, #targets identified,73,70,52,59,16,17,18,19,20,21,target1,target2,target3
+b14,w3,opt,s9,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,opt,s12,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,opt,s10,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,opt,s6,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,opt,s5,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,opt,s8,3,3,1,0,V,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,opt,s0,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,opt,s11,3,3,1,0,V,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,opt,s13,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,opt,s2,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,opt,s1,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,opt,s3,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,opt,s15,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,opt,s14,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,opt,s7,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,opt,s4,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-1.0,s11,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-1.0,s2,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 4.0-1.0,s8,3,1,1,1,X,O,V,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-1.0,s15,3,1,1,1,X,O,V,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-1.0,s3,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 4.0-1.0,s4,3,1,1,0,X,O,V,X,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 4.0-1.0,s9,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-1.0,s6,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 4.0-1.0,s5,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 4.0-1.0,s13,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-1.0,s12,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-1.0,s7,3,1,1,0,X,O,V,X,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 4.0-1.0,s0,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 4.0-1.0,s14,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-1.0,s10,3,1,1,0,X,O,V,X,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 4.0-1.0,s1,3,1,1,0,X,O,V,X,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 1.0-1.0,s6,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 1.0-1.0,s15,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 1.0-1.0,s7,3,1,1,1,X,O,V,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-1.0,s12,3,1,1,1,X,O,V,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-1.0,s1,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-1.0,s10,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 1.0-1.0,s0,3,1,1,1,X,O,V,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-1.0,s14,3,2,1,1,V,O,V,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-1.0,s11,3,1,1,1,X,O,V,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-1.0,s4,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-1.0,s5,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-1.0,s9,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 1.0-1.0,s3,3,0,1,0,X,O,X,X,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 1.0-1.0,s13,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 1.0-1.0,s8,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-1.0,s2,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s9,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s6,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s11,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s2,3,1,1,1,X,O,V,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s10,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s8,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s0,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s5,3,1,1,0,X,O,X,V,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 4.0-4.0,s7,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s12,3,1,1,1,X,O,X,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s3,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 4.0-4.0,s14,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s1,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 4.0-4.0,s13,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s15,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 4.0-4.0,s4,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-4.0,s11,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 1.0-4.0,s7,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-4.0,s12,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 1.0-4.0,s10,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-4.0,s0,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 1.0-4.0,s9,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 1.0-4.0,s4,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 1.0-4.0,s14,3,1,1,1,X,O,V,X,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-4.0,s5,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-4.0,s8,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,APBITE 1.0-4.0,s13,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-4.0,s6,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-4.0,s1,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,APBITE 1.0-4.0,s3,3,3,1,1,V,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-4.0,s15,3,2,1,1,X,O,V,V,O,O,O,O,O,O,V,O,O
+b14,w3,APBITE 1.0-4.0,s2,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookup,s13,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,lookup,s10,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s7,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s8,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s6,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,lookup,s11,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s2,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s5,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,lookup,s9,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s1,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s3,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s14,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s0,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s12,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s15,3,0,1,1,X,O,X,X,O,O,O,O,O,O,V,O,O
+b14,w3,lookup,s4,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,lookdown,s2,3,3,1,0,V,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s7,3,3,1,0,V,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s4,3,3,1,0,V,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s11,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,lookdown,s13,3,3,1,0,V,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s6,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s1,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,lookdown,s5,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s14,3,3,1,0,V,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s3,3,3,1,0,V,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s8,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,lookdown,s0,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s15,0,0,0,0,O,O,O,O,O,O,O,O,O,O,O,O,O
+b14,w3,lookdown,s12,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s9,3,2,1,0,X,O,V,V,O,O,O,O,O,O,X,O,O
+b14,w3,lookdown,s10,3,3,1,0,V,O,V,V,O,O,O,O,O,O,X,O,O
+
+
+
+
+
+Type,Sum(Obs_Passes),Sum(Obs_seen),Obs Ratio, ,Sum(Target_Passed),Sum(Target_seen),Target Ratio
+opt,30.0,30.0,1.0,,10.0,8.0,0.8
+APBITE 4.0-1.0,36.0,17.0,0.472222222222,,12.0,7.0,0.583333333333
+APBITE 1.0-1.0,33.0,16.0,0.484848484848,,11.0,10.0,0.909090909091
+APBITE 4.0-4.0,45.0,27.0,0.6,,15.0,13.0,0.866666666667
+APBITE 1.0-4.0,42.0,30.0,0.714285714286,,14.0,8.0,0.571428571429
+lookup,36.0,0.0,0.0,,12.0,12.0,1.0
+lookdown,36.0,31.0,0.861111111111,,12.0,0.0,0.0

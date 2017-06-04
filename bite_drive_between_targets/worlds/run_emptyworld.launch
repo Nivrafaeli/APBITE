@@ -1,0 +1,5 @@
+<launch>
+  <!-- start gazebo with an empty plane -->
+  <param name="/use_sim_time" value="true" />
+  <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find bite_drive_between_targets)/worlds/empty.world" respawn="false" output="screen"/>
+</launch>

@@ -1,0 +1,6 @@
+string[] nodes
+string[] currentTeam
+---
+string node
+string[] newTeam
+string params

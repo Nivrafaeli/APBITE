@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<launch>
+<arg name="file_path" default="$(find apbite_logger)/experiments"/>
+<arg name="world" default="0"/>
+<arg name="serial_num" default="0"/>
+<arg name="batch_number" default="1"/>
+<arg name="number_of_targets" default="3"/>
+<arg name="method" default=""/>  <!--opt/APBITE/lookdown/lookup-->
+<arg name="secs_to_miss_ObstacleOnTheWay" default="-1.0"/>
+<arg name="secs_to_miss_KnowsTargetLocation" default="-1.0"/>
+
+<!-- true location reslut logger -->
+<node name="true_measurment" pkg="apbite_logger" type="TrueMeasurment.py" >
+    <param name="robot_name" value="lizi_1" />
+    <param name="min_distance_target" type="double" value="2.2"/>
+    <param name="min_distance_obstacle" type="double" value="1.5"/>
+    <param name="targets" value="target1, target2, target3"/>
+    <param name="obstacles" value="free_marker_59, free_marker_52, free_marker_70, free_marker_73, free_marker_16, free_marker_17, free_marker_18, free_marker_19, free_marker_20, free_marker_21"/>
+</node>
+
+<!-- robot location reslut logger -->
+<node name="robot_measurment" pkg="apbite_logger" type="RobotMeasurment.py" >
+    <param name="robot_name" value="lizi_1" />
+</node>
+
+<!-- robot location reslut logger -->
+<node name="result_logger" pkg="apbite_logger" type="resultLogger.py" >
+    <param name="robot_name" value="lizi_1" />
+    <param name="file_name" value="$(arg file_path)/batch$(arg batch_number)/b$(arg batch_number)_exp_w$(arg world)_s$(arg serial_num)_$(arg method)_$(arg secs_to_miss_ObstacleOnTheWay)_$(arg secs_to_miss_KnowsTargetLocation).csv" />
+    <param name="experiment_name" value="b$(arg batch_number)_exp_w$(arg world)_s$(arg serial_num)" />
+    <param name="number_of_targets" value="$(arg number_of_targets)"/>
+    <param name="method" value="$(arg method)"/>  <!--opt/APBITE/lookdown/lookup-->
+</node>
+
+<node pkg="rosbag" type="record" name="rosbag_record" args="-a -x .*depth.*|.*compressed.*|.*Asus_Camera.*|.*Front_Camera.* -O /home/lizi-lab/storage/apbite_experiments/batch$(arg batch_number)_bags/b$(arg batch_number)_exp_w$(arg world)_s$(arg serial_num)_$(arg method)_$(arg secs_to_miss_ObstacleOnTheWay)_$(arg secs_to_miss_KnowsTargetLocation).bag"/>
+</launch>
+
+

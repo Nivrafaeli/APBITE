@@ -1,0 +1,12 @@
+node	 action
+initiate	Start
+initiate	Terminate
+look_up	Start
+look_up	Terminate
+look_down	Start
+look_down	Terminate
+Choose_target	Start
+Choose_target	Terminate
+search_target	Start
+search_target	Terminate
+go_to_target	Start

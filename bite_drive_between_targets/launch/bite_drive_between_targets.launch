@@ -1,0 +1,74 @@
+<launch>
+<!-- APBITE -->
+<arg name="method" default="false"/>
+<arg name="world1" default="false"/>
+<arg name="world2" default="false"/>
+<arg name="world3" default="false"/>
+<arg name="world4" default="false"/>
+<arg name="world5" default="false"/>
+<arg name="world6" default="false"/>
+<arg name="secs_to_miss_ObstacleOnTheWay" default="-1.0"/>
+<arg name="secs_to_miss_KnowsTargetLocation" default="-1.0"/>
+
+  <node name="bite_lizi_1_allocate_node" pkg="bite_drive_between_targets" type="Allocate.py" args="lizi_1" />
+  <node name="bite_lizi_1_vote_node" pkg="bite_drive_between_targets" type="Vote.py" args="lizi_1" />
+  <node name="bite_lizi_1_knowledgebase_node" pkg="apbite" type="KnowledgeBase.py" args="bite_sample lizi_1" output="screen" />
+  <node name="bite_lizi_1_main_node" pkg="apbite" type="APBITE.py" args="bite_drive_between_targets lizi_1 lizi_1 $(arg method) $(arg secs_to_miss_ObstacleOnTheWay) $(arg secs_to_miss_KnowsTargetLocation)" output="screen" />
+   <node name="bite_lizi_1_localization" pkg="bite_drive_between_targets" type="localization.py" >
+    <param name="robot_name" value="lizi_1" />
+  </node>
+
+<!-- BITE -->
+<!--
+  <node name="bite_lizi_1_allocate_node" pkg="bite_drive_between_targets" type="Allocate.py" args="lizi_1" />
+  <node name="bite_lizi_1_vote_node" pkg="bite_drive_between_targets" type="Vote.py" args="lizi_1" />
+  <node name="bite_lizi_1_knowledgebase_node" pkg="bite" type="KnowledgeBase.py" args="bite_sample lizi_1" output="screen" />
+  <node name="bite_lizi_1_main_node" pkg="bite" type="BITE.py" args="bite_drive_between_targets lizi_1 lizi_1" output="screen" />
+-->
+
+  <node name="topicsListener" pkg="bite_drive_between_targets" type="TopicsListener.py" args="lizi_1"/>
+  
+
+<node pkg="rviz" type="rviz" name="rviz" args="-d $(find bite_drive_between_targets)/rvizconfig/drivebetween.rviz"/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+<node name="ar_kinect_asus" pkg="ar_kinect" type="ar_kinect" respawn="false" output="screen">
+        <remap from="points" to="/lizi_1/Asus_Camera/depth/points"/>
+		<param name="marker_pattern_list" type="string" value="$(find bite_drive_between_targets)/data/object_4x4_target1"/>
+		<param name="marker_data_directory" type="string" value="$(find ar_pose)"/>
+		<param name="threshold" type="int" value="150"/>
+</node>
+
+
+
+<!-- WORLD 1 HAS A DIFFERENT LIGHT SETTINGS THEN THE OTHER WORDLS DUE TO SHADOWING PROBLEMS -->
+<!--include file="$(find ric_gazebo)/launch/lizi_gazebo.launch"> </include-->
+
+<include file="$(find ric_gazebo)/launch/lizi_gazebo.launch" if="$(arg world1)">
+	<arg name="emptyworld" value="lights1.world"/>
+</include>
+<include file="$(find ric_gazebo)/launch/lizi_gazebo.launch" if="$(arg world2)">
+	<arg name="emptyworld" value="lights2.world"/>
+</include>
+<include file="$(find ric_gazebo)/launch/lizi_gazebo.launch" if="$(arg world3)">
+	<arg name="emptyworld" value="lights2.world"/>
+</include>
+<include file="$(find ric_gazebo)/launch/lizi_gazebo.launch" if="$(arg world4)">
+	<arg name="emptyworld" value="lights2.world"/>
+</include>
+<include file="$(find ric_gazebo)/launch/lizi_gazebo.launch" if="$(arg world5)">
+	<arg name="emptyworld" value="lights2.world"/>
+</include>
+<include file="$(find ric_gazebo)/launch/lizi_gazebo.launch" if="$(arg world6)">
+	<arg name="emptyworld" value="lights2.world"/>
+</include>
+
+<include file="$(find bite_drive_between_targets)/launch/Worlds/world_1.launch" if="$(arg world1)"> </include>
+<include file="$(find bite_drive_between_targets)/launch/Worlds/world_2.launch" if="$(arg world2)"> </include>
+<include file="$(find bite_drive_between_targets)/launch/Worlds/world_3.launch" if="$(arg world3)"> </include>
+<include file="$(find bite_drive_between_targets)/launch/Worlds/world_4.launch" if="$(arg world4)"> </include>
+<include file="$(find bite_drive_between_targets)/launch/Worlds/world_5.launch" if="$(arg world5)"> </include>
+<include file="$(find bite_drive_between_targets)/launch/Worlds/world_6.launch" if="$(arg world6)"> </include>
+
+</launch>
+

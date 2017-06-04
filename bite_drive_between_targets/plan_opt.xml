@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<data>
+    <nodes>
+        <node nodeName="initiate">
+            <behaviorName>Initiate</behaviorName>
+            <termCond>AllReady</termCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+        <node nodeName="Choose_target">
+            <behaviorName>ChooseTarget</behaviorName>
+            <preCond>ThereAreTargets</preCond>
+            <termCond>TargetChosen</termCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+        <node nodeName="search_target">
+            <behaviorName>TurnLeft90</behaviorName>
+            <!--behaviorName>SearchTarget</behaviorName-->
+            <termCond>Target_Found</termCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+        <node nodeName="go_to_target">
+            <behaviorName>GoToTarget</behaviorName>
+            <termCond>ReachedToTarget</termCond>
+            <termCond>ObstacleFound</termCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+
+        <!--node nodeName="find_target">
+            <behaviorName>FindTarget</behaviorName>
+            <termCond>Target_Found</termCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node-->
+        <node nodeName="look_up">
+            <behaviorName>LookUp</behaviorName>
+            <preCond>CameraDown</preCond>
+            <termCond>CameraUp</termCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+        <!--/node nodeName="look_for_obstacle">
+            <behaviorName>LookForObstacle</behaviorName>
+            <termCond>FoundObstacle</termCond>
+            <termCond>CameraIsNeeded</termCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node-->
+        <node nodeName="look_down">
+            <behaviorName>LookDown</behaviorName>
+            <preCond>CameraUp</preCond>
+            <termCond>CameraDown</termCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+
+        <node nodeName="at_target">
+            <behaviorName>AtTarget</behaviorName>
+            <preCond>ReachedToTarget</preCond>
+            <termCond>ReachedUpdated</termCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+        <node nodeName="at_obstacle">
+            <behaviorName>AtObstacle</behaviorName>
+            <preCond>FoundObstacle</preCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+        <node nodeName="termination">
+            <behaviorName>Termination</behaviorName>
+            <preCond>ThereAreNoTargets</preCond>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+        </node>
+    </nodes>
+    <heirarchicalEdges>
+        <!--heirarchicalEdge from="look_for_obstacle" to="look_down"/>
+        <heirarchicalEdge from="find_target" to="look_up"/-->
+    </heirarchicalEdges>
+    <sequentialEdges>
+        <!-- for world 1-->
+        <sequentialEdge from="initiate" to="Choose_target"/>
+        <sequentialEdge from="Choose_target" to="search_target"/>
+        <sequentialEdge from="search_target" to="go_to_target"/>
+        <!-- for world 2
+        <sequentialEdge from="initiate" to="Choose_target"/>
+        <sequentialEdge from="Choose_target" to="go_to_target"/>
+        -->
+        <sequentialEdge from="go_to_target" to="at_target"/>
+        <sequentialEdge from="go_to_target" to="at_obstacle"/>
+        <sequentialEdge from="at_target" to="termination"/>
+        <sequentialEdge from="at_target" to="Choose_target"/>
+    </sequentialEdges>
+    <APplans>
+    </APplans>
+</data>
+

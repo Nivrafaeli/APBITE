@@ -1,0 +1,65 @@
+<launch>
+    <!--Obsticles - Ground markers spawn-->
+@ 52
+@ 59
+@ 70
+@ 16
+@ 17
+@ 18
+@ 19
+@ 20
+@ 21
+
+    <!-- *** Target 1 ***-->
+    <!-- send table urdf to param server -->
+    <node name="spawn_target1" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/target1.urdf -urdf -x 4 -y 0 -z 0 -Y 0 -model target1" />
+
+      <!-- Static transforms between markers and the target location (on the ground, at the center of the cube) -->
+    <arg name="target1_front_marker_name" default="4x4_4"/>
+    <arg name="target1_right_marker_name" default="4x4_1"/>
+    <arg name="target1_rear_marker_name" default="4x4_2"/>
+    <arg name="target1_left_marker_name" default="4x4_3"/>
+    <arg name="target1_top_marker_name" default="4x4_5"/>
+    <!--node pkg="tf" type="static_transform_publisher" name="target1_front_marker_to_base_link" args="0 -0.5 -0.5 -1.57 -1.57 0 $(arg target1_front_marker_name) target1_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_right_marker_base_link" args="0 -0.5 -0.5 0 0 -1.57 $(arg target1_right_marker_name) target1_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_rear_marker_base_link" args= "0 -0.5 -0.5 -1.57 1.57 3.14 $(arg target1_rear_marker_name) target1_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_left_marker_base_link" args= "0 -0.5 -0.5 0 3.14 -1.57 $(arg target1_left_marker_name) target1_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_top_marker_base_link" args=  "0 0 -1 0 0 0 $(arg target1_top_marker_name) target1_base_link 100"/-->
+
+    <node pkg="tf" type="static_transform_publisher" name="target1_front_marker_to_base_link" args="0 -0.5 -0.5 -1.57 -1.57 0 $(arg target1_front_marker_name) target1_front_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_right_marker_base_link" args="0 -0.5 -0.5 0 0 -1.57 $(arg target1_right_marker_name) target1_right_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_rear_marker_base_link" args= "0 -0.5 -0.5 -1.57 1.57 3.14 $(arg target1_rear_marker_name) target1_rear_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_left_marker_base_link" args= "0 -0.5 -0.5 0 3.14 -1.57 $(arg target1_left_marker_name) target1_left_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_top_marker_base_link" args=  "0 0 -1 0 0 0 $(arg target1_top_marker_name) target1_top_base_link 100"/>
+
+    <!-- *** Target 2 ***-->
+    <!-- send table urdf to param server -->
+    <node name="spawn_target2" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/target2.urdf -urdf -x 2.5 -y 4 -z 0 -Y 0 -model target2" />
+    <!-- Static transforms between markers and the target location (on the ground, at the center of the cube) -->
+    <arg name="target2_front_marker_name" default="4x4_9"/>
+    <arg name="target2_right_marker_name" default="4x4_6"/>
+    <arg name="target2_rear_marker_name" default="4x4_7"/>
+    <arg name="target2_left_marker_name" default="4x4_8"/>
+    <arg name="target2_top_marker_name" default="4x4_10"/>
+    <node pkg="tf" type="static_transform_publisher" name="target2_front_marker_to_base_link" args="0 -0.5 -0.5 -1.57 -1.57 0 $(arg target2_front_marker_name) target2_front_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target2_right_marker_base_link" args="0 -0.5 -0.5 0 0 -1.57 $(arg target2_right_marker_name) target2_right_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target2_rear_marker_base_link" args= "0 -0.5 -0.5 -1.57 1.57 3.14 $(arg target2_rear_marker_name) target2_rear_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target2_left_marker_base_link" args= "0 -0.5 -0.5 0 3.14 -1.57 $(arg target2_left_marker_name) target2_left_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target2_top_marker_base_link" args=  "0 0 -1 0 0 0 $(arg target2_top_marker_name) target2_top_base_link 100"/>
+
+    <!-- *** Target 3 ***-->
+    <!-- send table urdf to param server -->
+    <node name="spawn_target3" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/target3.urdf -urdf -x -1.5 -y 2.5 -z 0 -Y 0 -model target3" />
+    <!-- Static transforms between markers and the target location (on the ground, at the center of the cube) -->
+    <arg name="target3_front_marker_name" default="4x4_14"/>
+    <arg name="target3_right_marker_name" default="4x4_11"/>
+    <arg name="target3_rear_marker_name" default="4x4_12"/>
+    <arg name="target3_left_marker_name" default="4x4_13"/>
+    <arg name="target3_top_marker_name" default="4x4_15"/>
+    <node pkg="tf" type="static_transform_publisher" name="target3_front_marker_to_base_link" args="0 -0.5 -0.5 -1.57 -1.57 0 $(arg target3_front_marker_name) target3_front_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target3_right_marker_base_link" args="0 -0.5 -0.5 0 0 -1.57 $(arg target3_right_marker_name) target3_right_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target3_rear_marker_base_link" args= "0 -0.5 -0.5 -1.57 1.57 3.14 $(arg target3_rear_marker_name) target3_rear_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target3_left_marker_base_link" args= "0 -0.5 -0.5 0 3.14 -1.57 $(arg target3_left_marker_name) target3_left_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target3_top_marker_base_link" args=  "0 0 -1 0 0 0 $(arg target3_top_marker_name) target3_top_base_link 100"/>
+
+</launch>

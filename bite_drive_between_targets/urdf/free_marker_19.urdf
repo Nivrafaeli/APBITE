@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<robot name="free_marker_19">
+
+  <link name="my_box">    
+    <visual>      
+        <geometry>
+            <mesh filename="package://bite_drive_between_targets/meshes/marker19.dae"/>
+        </geometry>
+    </visual>
+
+    <inertial>      
+      <mass value="0.0001"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <collision>     
+      <geometry>
+        <box size="0.2 0.2 0.001" />
+
+      </geometry>
+    </collision>
+  </link>  
+
+
+</robot>

@@ -1,0 +1,13 @@
+<launch>
+  <node name="bite_r0_allocate_node" pkg="bite_drive_between_targets" type="Allocate.py" args="r0" />
+  <node name="bite_r0_vote_node" pkg="bite_drive_between_targets" type="Vote.py" args="r0" />
+  <node name="bite_r0_knowledgebase_node" pkg="bite" type="KnowledgeBase.py" args="bite_sample r0" output="screen" />
+  <node name="bite_r0_main_node" pkg="apbite" type="APBITE.py" args="bite_drive_between_targets r0 r0" output="screen" />
+  
+ <include file="$(find ric_gazebo)/launch/lizi_gazebo.launch">
+  </include>
+
+<!-- <include file="$(find ric_gazebo)/launch/lizi_rviz.launch">
+  </include> -->
+
+</launch>

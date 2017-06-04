@@ -1,0 +1,9 @@
+ time, 0-real 1-robot,object type,agent to obs x(robot),agent to obs y(robot),agent to obs z(robot), distance(robot),distance(real), sus obs x(robot), sus obs y(robot),sus obs z(robot), obs x(real), obs y(real), obs z(real), robot x(real), robot y(real), robot z(real)
+55.192000, 0, Obstacle 73 ,,,,,1.21,,,,1.21,-0.0,0.0,0.0,0.0,0.1 
+106.141000, 0, Obstacle 59 ,,,,,1.5,,,,5.49,0.0,0.0,3.99,0.01,0.04 
+110.131000, 0, Obstacle 52 ,,,,,1.5,,,,6.01,0.0,0.0,4.51,0.02,0.04 
+117.740000, 1, myObstacle 52,0.69,0.08,-0.04,0.7,0.51,6.14,0.1,0.0,6.01,0.0,0.0,5.5,0.02,0.04 
+118.003000, 1, myObstacle 52,0.69,0.08,-0.04,0.7,0.48,6.15,0.1,0.0,6.01,0.0,0.0,5.53,0.02,0.04 
+118.275000, 1, myObstacle 52,0.69,0.08,-0.04,0.7,0.44,6.15,0.1,0.0,6.01,0.0,0.0,5.57,0.02,0.04 
+118.528000, 1, myObstacle 52,0.69,0.08,-0.04,0.7,0.41,6.15,0.1,0.0,6.01,0.0,0.0,5.6,0.02,0.04 
+131.611000, 0, Target target1 ,,,,,2.2,,,,9.5,0.0,0.0,7.3,0.03,0.04 

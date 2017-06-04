@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<data>
+    <nodes>
+        <node nodeName="initialize">
+            <behaviorName>Initialize</behaviorName>
+            <allocateMethod>allocate_all</allocateMethod>
+            <voteMethod>vote</voteMethod>
+            <preCond>OddNumberOfEnemiesDestroyed</preCond>
+            <termCond>Attack</termCond>
+        </node>
+        <node nodeName="move_to_destination">
+            <behaviorName>MoveToDestination</behaviorName>
+            <allocateMethod/>
+            <voteMethod>vote</voteMethod>
+            <termCond>AllRobotsReachedDestination</termCond>
+        </node>
+        <node nodeName="patrol">
+            <behaviorName>Patrol</behaviorName>
+            <allocateMethod>allocate_separate</allocateMethod>
+            <voteMethod>vote</voteMethod>
+            <preCond>AllRobotsReachedDestination</preCond>
+        </node>
+        <node nodeName="search_enemy">
+            <behaviorName>SearchEnemy</behaviorName>
+            <allocateMethod/>
+            <voteMethod/>
+        </node>
+        <node nodeName="wait_for_information">
+            <behaviorName>WaitForInformation</behaviorName>
+            <allocateMethod/>
+            <voteMethod/>
+        </node>
+        <node nodeName="attack">
+            <behaviorName>Attack</behaviorName>
+            <allocateMethod>allocate_half</allocateMethod>
+            <voteMethod>vote</voteMethod>
+            <preCond>Attack</preCond>
+            <termCond>EnemyDestroyed</termCond>
+        </node>
+        <node nodeName="attack_from_side">
+            <behaviorName>AttackFromSide</behaviorName>
+            <allocateMethod/>
+            <voteMethod/>
+        </node>
+    </nodes>
+    <heirarchicalEdges>
+        <heirarchicalEdge from="initialize" to="move_to_destination"/>
+        <heirarchicalEdge from="patrol" to="wait_for_information"/>
+        <heirarchicalEdge from="patrol" to="search_enemy"/>
+        <heirarchicalEdge from="attack" to="attack_from_side"/>
+    </heirarchicalEdges>
+    <sequentialEdges>
+        <sequentialEdge from="move_to_destination" to="patrol"/>
+        <sequentialEdge from="initialize" to="attack"/>
+        <sequentialEdge from="attack" to="initialize"/>
+    </sequentialEdges>
+</data>
+

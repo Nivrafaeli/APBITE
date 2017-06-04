@@ -1,0 +1,1404 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <light name='user_point_light_0' type='point'>
+      <pose frame=''>0.318638 0.099328 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <light name='user_point_light_1' type='point'>
+      <pose frame=''>2.1471 0.42576 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <light name='user_point_light_2' type='point'>
+      <pose frame=''>0.278442 2.15458 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <light name='user_point_light_3' type='point'>
+      <pose frame=''>-0.331288 -1.53589 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <state world_name='default'>
+      <sim_time>70 323000000</sim_time>
+      <real_time>4 980954883</real_time>
+      <wall_time>1489408032 772857082</wall_time>
+      <iterations>3497</iterations>
+      <model name='free_marker_52'>
+        <pose frame=''>6.35 0 0.0005 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='my_box'>
+          <pose frame=''>6.35 0 0.0005 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 7e-06 -9.8e-05 9e-05 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='free_marker_59'>
+        <pose frame=''>2.04 0 0.0005 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='my_box'>
+          <pose frame=''>2.04 0 0.0005 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -2e-05 9.8e-05 9.8e-05 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='free_marker_73'>
+        <pose frame=''>4.14 0 0.0005 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='my_box'>
+          <pose frame=''>4.14 0 0.0005 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 7e-06 9.2e-05 9.8e-05 -0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='lizi_1'>
+        <pose frame=''>-0.000929 8.3e-05 0.038998 0 1.5e-05 0.000325</pose>
+        <scale>1 1 1</scale>
+        <link name='Asus_Camera_link'>
+          <pose frame=''>0.079804 -0.000255 0.211089 -0.000177 -0.019267 -0.08782</pose>
+          <velocity>-0.000601 -0.000141 -0.002188 0.018378 0.020107 0.006065</velocity>
+          <acceleration>-0.812314 -0.406966 -5.61962 2.72318 0.302859 -1.74523</acceleration>
+          <wrench>-0.119321 -0.059779 -0.825465 0 -0 0</wrench>
+        </link>
+        <link name='Asus_Pan_link'>
+          <pose frame=''>0.080322 0.00011 0.131086 -0.000207 0.000139 -0.087825</pose>
+          <velocity>0.000419 0.000179 -0.001957 0.01171 -0.038271 0.006472</velocity>
+          <acceleration>-0.199682 0.130498 -6.77804 1.72426 -0.164505 2.58814</acceleration>
+          <wrench>-0.003227 0.002109 -0.109547 0 -0 0</wrench>
+        </link>
+        <link name='FL_Wheel_link'>
+          <pose frame=''>0.117027 0.133922 0.064997 -3.14159 0.0073 0.00032</pose>
+          <velocity>-2.4e-05 2e-06 -0.003264 0.000198 0.013492 0.001561</velocity>
+          <acceleration>0.769693 -0.017484 -7.73233 0.526271 1.41086 -2.80627</acceleration>
+          <wrench>0.314343 -0.00714 -3.15788 0 -0 0</wrench>
+        </link>
+        <link name='FR_Wheel_link'>
+          <pose frame=''>0.117114 -0.133678 0.064997 0 0.001395 0.000325</pose>
+          <velocity>2.7e-05 -1e-06 -0.003256 7.9e-05 0.013469 0.000309</velocity>
+          <acceleration>0.849978 -0.014259 -7.7099 0.295741 1.13643 0.148858</acceleration>
+          <wrench>0.347131 -0.005823 -3.14872 0 -0 0</wrench>
+        </link>
+        <link name='RL_Wheel_link'>
+          <pose frame=''>-0.118971 0.133844 0.065 3.14155 -0.014766 0.000321</pose>
+          <velocity>0.000141 -3.3e-05 3.4e-05 0.000679 0.002596 -0.001055</velocity>
+          <acceleration>1.15343 -0.062449 0.076254 0.959453 -0.522251 -2.54126</acceleration>
+          <wrench>0.471063 -0.025504 0.031142 0 -0 0</wrench>
+        </link>
+        <link name='RR_Wheel_link'>
+          <pose frame=''>-0.118884 -0.133755 0.065 1.8e-05 -0.013241 0.000335</pose>
+          <velocity>0.000184 -2.5e-05 1e-05 0.000303 0.00352 0.002868</velocity>
+          <acceleration>1.15209 -0.034367 0.022273 0.505094 0.465818 -0.210298</acceleration>
+          <wrench>0.470513 -0.014035 0.009096 0 -0 0</wrench>
+        </link>
+        <link name='dummy_link'>
+          <pose frame=''>-0.000929 8.3e-05 0.038998 0 1.5e-05 0.000325</pose>
+          <velocity>-0.000472 -1.6e-05 -0.001632 2e-05 0.013506 0.000197</velocity>
+          <acceleration>1.92691 -0.044778 -2.8951 0.03399 0.568264 0.237934</acceleration>
+          <wrench>9.41217 -0.21872 -14.1414 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='target1'>
+        <pose frame=''>10.6789 -0.056509 0.0005 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='cube_base_link'>
+          <pose frame=''>10.6789 -0.056509 0.0005 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 5e-06 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_0'>
+        <pose frame=''>0.318638 0.099328 1 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_1'>
+        <pose frame=''>2.1471 0.42576 1 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_2'>
+        <pose frame=''>0.278442 2.15458 1 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_3'>
+        <pose frame=''>-0.331288 -1.53589 1 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_4'>
+        <pose frame=''>9.14177 -0.073421 1 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_5'>
+        <pose frame=''>6.60725 -0.898371 1 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_6'>
+        <pose frame=''>6.0367 -1.86252 1 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-3.40848 -2.81288 3.9293 0 0.392876 0.353855</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='lizi_1'>
+      <link name='dummy_link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.030388 0.000683 0.069501 0 -0 0</pose>
+          <mass>4.88459</mass>
+          <inertia>
+            <ixx>0.0322902</ixx>
+            <ixy>5.12242e-05</ixy>
+            <ixz>-0.00464129</ixz>
+            <iyy>0.071447</iyy>
+            <iyz>2.81135e-05</iyz>
+            <izz>0.0823837</izz>
+          </inertia>
+        </inertial>
+        <collision name='dummy_link_fixed_joint_lump__base_link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='dummy_link_fixed_joint_lump__Camera_link_collision_1'>
+          <pose frame=''>0.178 0.05775 0.054305 0 -0.006158 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Camera_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='dummy_link_fixed_joint_lump__Laser_link_collision_2'>
+          <pose frame=''>0.14276 -1.2e-05 0.10781 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Laser_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='dummy_link_fixed_joint_lump__Left_URF_link_collision_3'>
+          <pose frame=''>-0.007458 0.1055 0.07895 0 -0 1.57</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Left_URF_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='dummy_link_fixed_joint_lump__Rear_URF_link_collision_4'>
+          <pose frame=''>-0.182 0.085 0.093934 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Rear_URF_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='dummy_link_fixed_joint_lump__Right_URF_link_collision_5'>
+          <pose frame=''>-0.007458 -0.1055 0.07895 0 0 -1.57</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Right_URF_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='dummy_link_fixed_joint_lump__base_link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='dummy_link_fixed_joint_lump__Camera_link_visual_1'>
+          <pose frame=''>0.178 0.05775 0.054305 0 -0.006158 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Camera_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='dummy_link_fixed_joint_lump__Laser_link_visual_2'>
+          <pose frame=''>0.14276 -1.2e-05 0.10781 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Laser_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='dummy_link_fixed_joint_lump__Left_URF_link_visual_3'>
+          <pose frame=''>-0.007458 0.1055 0.07895 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Left_URF_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='dummy_link_fixed_joint_lump__Rear_URF_link_visual_4'>
+          <pose frame=''>-0.182 0.085 0.093934 0 -0 -0.003185</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Rear_URF_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='dummy_link_fixed_joint_lump__Right_URF_link_visual_5'>
+          <pose frame=''>-0.007458 -0.1055 0.07895 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Right_URF_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <velocity_decay/>
+        <velocity_decay/>
+        <sensor name='front_camera' type='camera'>
+          <visualize>0</visualize>
+          <update_rate>15</update_rate>
+          <camera name='Front_Camera'>
+            <horizontal_fov>2</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>9</far>
+            </clip>
+          </camera>
+          <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+            <alwaysOn>true</alwaysOn>
+            <robotNamespace>lizi_1</robotNamespace>
+            <cameraName>Front_Camera</cameraName>
+            <imageTopicName>image_raw</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>Camera_link</frameName>
+            <hackBaseline>0.07</hackBaseline>
+            <distortionK1>0.0</distortionK1>
+            <distortionK2>0.0</distortionK2>
+            <distortionK3>0.0</distortionK3>
+            <distortionT1>0.0</distortionT1>
+            <distortionT2>0.0</distortionT2>
+          </plugin>
+          <pose frame=''>0.178 0.05775 0.054305 0 -0.006158 0</pose>
+        </sensor>
+        <velocity_decay/>
+        <velocity_decay/>
+        <sensor name='head_hokuyo_sensor' type='ray'>
+          <visualize>0</visualize>
+          <update_rate>10</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>200</samples>
+                <resolution>1</resolution>
+                <min_angle>-1.5708</min_angle>
+                <max_angle>1.5708</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>1</samples>
+                <min_angle>0</min_angle>
+                <max_angle>0</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.06</min>
+              <max>4.095</max>
+              <resolution>0.01</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.01</stddev>
+            </noise>
+          </ray>
+          <plugin name='gazebo_ros_head_hokuyo_controller' filename='libgazebo_ros_laser.so'>
+            <topicName>scan</topicName>
+            <frameName>Laser_link</frameName>
+            <robotNamespace>/lizi_1/</robotNamespace>
+          </plugin>
+          <pose frame=''>0.14276 -1.2e-05 0.10781 0 -0 0</pose>
+        </sensor>
+        <velocity_decay/>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Asus_Pan_link'>
+        <pose frame=''>0.081249 0 0.092091 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.015533 -0.010751 0.019512 0 -0 0</pose>
+          <mass>0.016162</mass>
+          <inertia>
+            <ixx>5.2781e-06</ixx>
+            <ixy>1.178e-06</ixy>
+            <ixz>1.1286e-06</ixz>
+            <iyy>6.0052e-06</iyy>
+            <iyz>7.9421e-07</iyz>
+            <izz>4.7257e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='Asus_Pan_link_collision'>
+          <pose frame=''>0 0 0 3.14159 1.57079 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Asus_Pan_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Asus_Pan_link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Asus_Pan_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Asus_Pan_Joint' type='revolute'>
+        <child>Asus_Pan_link</child>
+        <parent>dummy_link</parent>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1</lower>
+            <upper>1</upper>
+            <effort>10</effort>
+            <velocity>0</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='Asus_Camera_link'>
+        <pose frame=''>0.08076 -0.000413 0.172091 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.000103 -0.000258 0.000328 0 -0 0</pose>
+          <mass>0.14689</mass>
+          <inertia>
+            <ixx>0.00037709</ixx>
+            <ixy>-2.2879e-08</ixy>
+            <ixz>1.0241e-05</ixz>
+            <iyy>0.00038351</iyy>
+            <iyz>1.2981e-08</iyz>
+            <izz>2.2432e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='Asus_Camera_link_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Asus_Camera_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Asus_Camera_link_visual'>
+          <pose frame=''>0 0 0 1.57 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/Asus_Camera_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <sensor name='Asus_Camera_link' type='depth'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <visualize>1</visualize>
+          <update_rate>10</update_rate>
+          <camera name='__default__'>
+            <horizontal_fov>2</horizontal_fov>
+            <image>
+              <format>R8G8B8</format>
+              <width>640</width>
+              <height>480</height>
+            </image>
+            <clip>
+              <near>0.5</near>
+              <far>9</far>
+            </clip>
+          </camera>
+          <plugin name='Asus_Camera_link_camera_controller' filename='libgazebo_ros_openni_kinect.so'>
+            <alwaysOn>true</alwaysOn>
+            <updateRate>5.0</updateRate>
+            <cameraName>Asus_Camera</cameraName>
+            <imageTopicName>rgb/image_raw</imageTopicName>
+            <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+            <depthImageTopicName>depth/image_raw</depthImageTopicName>
+            <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+            <pointCloudTopicName>depth/rotated_points</pointCloudTopicName>
+            <pointCloudCutoff>0.4</pointCloudCutoff>
+            <pointCloudCutoffMax>5.0</pointCloudCutoffMax>
+            <frameName>/Asus_Camera_link</frameName>
+            <distortion_k1>0.0</distortion_k1>
+            <distortion_k2>0.0</distortion_k2>
+            <distortion_k3>0.0</distortion_k3>
+            <distortion_t1>0.0</distortion_t1>
+            <distortion_t2>0.0</distortion_t2>
+            <robotNamespace>/lizi_1/</robotNamespace>
+          </plugin>
+        </sensor>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='Asus_Tilt_Joint' type='revolute'>
+        <child>Asus_Camera_link</child>
+        <parent>Asus_Pan_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1</lower>
+            <upper>1</upper>
+            <effort>10</effort>
+            <velocity>0</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='FL_Wheel_link'>
+        <pose frame=''>0.118 0.1338 0.026 -3.14159 -0 -0</pose>
+        <inertial>
+          <pose frame=''>0 -0.007597 0 0 -0 0</pose>
+          <mass>0.4084</mass>
+          <inertia>
+            <ixx>0.00059356</ixx>
+            <ixy>3.4979e-14</ixy>
+            <ixz>-4.6514e-14</ixz>
+            <iyy>0.0011268</iyy>
+            <iyz>5.6928e-14</iyz>
+            <izz>0.00059356</izz>
+          </inertia>
+        </inertial>
+        <collision name='FL_Wheel_link_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.02</length>
+              <radius>0.065</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='FL_Wheel_link_visual'>
+          <pose frame=''>0 0 0 -3.14159 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/FL_Wheel_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='FL_Wheel_Joint' type='revolute'>
+        <child>FL_Wheel_link</child>
+        <parent>dummy_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='FR_Wheel_link'>
+        <pose frame=''>0.118 -0.1338 0.026 0 -0.006158 0</pose>
+        <inertial>
+          <pose frame=''>-0 0.003597 0 0 -0 0</pose>
+          <mass>0.4084</mass>
+          <inertia>
+            <ixx>0.00059356</ixx>
+            <ixy>3.4627e-14</ixy>
+            <ixz>4.9977e-14</ixz>
+            <iyy>0.0011268</iyy>
+            <iyz>-5.7142e-14</iyz>
+            <izz>0.00059356</izz>
+          </inertia>
+        </inertial>
+        <collision name='FR_Wheel_link_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.02</length>
+              <radius>0.065</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='FR_Wheel_link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/FR_Wheel_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='FR_Wheel_Joint' type='revolute'>
+        <child>FR_Wheel_link</child>
+        <parent>dummy_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='RL_Wheel_link'>
+        <pose frame=''>-0.118 0.1338 0.026 -3.14159 -0 -0</pose>
+        <inertial>
+          <pose frame=''>0 -0.003597 0 0 -0 0</pose>
+          <mass>0.4084</mass>
+          <inertia>
+            <ixx>0.00059356</ixx>
+            <ixy>3.4979e-14</ixy>
+            <ixz>-4.6514e-14</ixz>
+            <iyy>0.0011268</iyy>
+            <iyz>5.6928e-14</iyz>
+            <izz>0.00059356</izz>
+          </inertia>
+        </inertial>
+        <collision name='RL_Wheel_link_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.02</length>
+              <radius>0.065</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='RL_Wheel_link_visual'>
+          <pose frame=''>0 0 0 -3.14159 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/RL_Wheel_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RL_Wheel_Joint' type='revolute'>
+        <child>RL_Wheel_link</child>
+        <parent>dummy_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='RR_Wheel_link'>
+        <pose frame=''>-0.118 -0.1338 0.026 -0 -0 -0</pose>
+        <inertial>
+          <pose frame=''>-0 0.003597 0 0 -0 0</pose>
+          <mass>0.4084</mass>
+          <inertia>
+            <ixx>0.00059356</ixx>
+            <ixy>3.4979e-14</ixy>
+            <ixz>4.6514e-14</ixz>
+            <iyy>0.0011268</iyy>
+            <iyz>-5.6928e-14</iyz>
+            <izz>0.00059356</izz>
+          </inertia>
+        </inertial>
+        <collision name='RR_Wheel_link_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.02</length>
+              <radius>0.065</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='RR_Wheel_link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/ric_description/lizi/meshes/RR_Wheel_Link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RR_Wheel_Joint' type='revolute'>
+        <child>RR_Wheel_link</child>
+        <parent>dummy_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+        <robotNamespace>lizi_1</robotNamespace>
+      </plugin>
+      <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_skid_steer_drive.so'>
+        <always_on>1</always_on>
+        <updateRate>50.0</updateRate>
+        <robotNamespace>/lizi_1</robotNamespace>
+        <broadcastTF>1</broadcastTF>
+        <leftFrontJoint>FL_Wheel_Joint</leftFrontJoint>
+        <rightFrontJoint>FR_Wheel_Joint</rightFrontJoint>
+        <leftRearJoint>RL_Wheel_Joint</leftRearJoint>
+        <rightRearJoint>RR_Wheel_Joint</rightRearJoint>
+        <wheelSeparation>0.5</wheelSeparation>
+        <wheelDiameter>0.2</wheelDiameter>
+        <robotBaseFrame>dummy_link</robotBaseFrame>
+        <odometryTopic>diff_driver/odometry</odometryTopic>
+        <odometryFrame>odom_link</odometryFrame>
+        <torque>20</torque>
+        <commandTopic>diff_driver/command</commandTopic>
+      </plugin>
+      <static>0</static>
+      <plugin name='imu_sim' filename='libhector_gazebo_ros_imu.so'>
+        <updateRate>20.0</updateRate>
+        <bodyName>dummy_link</bodyName>
+        <frameId>lizi_1/dummy_link</frameId>
+        <topicName>IMU_AGQ</topicName>
+        <rpyOffsets>0 0 0</rpyOffsets>
+        <gaussianNoise>0</gaussianNoise>
+        <accelDrift>0.5 0.5 0.5</accelDrift>
+        <xyzOffset>0.0 0.0 0.0</xyzOffset>
+        <rpyOffset>0.0 0.0 0.0</rpyOffset>
+        <accelGaussianNoise>0.35 0.35 0.3</accelGaussianNoise>
+        <rateDrift>0.1 0.1 0.1</rateDrift>
+        <rateGaussianNoise>0.05 0.05 0.015</rateGaussianNoise>
+        <robotNamespace>/lizi_1/</robotNamespace>
+      </plugin>
+      <pose frame=''>0 0 0.1 0 -0 0</pose>
+    </model>
+    <model name='free_marker_52'>
+      <link name='my_box'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.0001</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='my_box_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='my_box_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/bite_drive_between_targets/meshes/marker52.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>6.35 0 0 0 -0 0</pose>
+    </model>
+    <model name='free_marker_73'>
+      <link name='my_box'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.0001</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='my_box_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='my_box_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/bite_drive_between_targets/meshes/marker.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>4.14 0 0 0 -0 0</pose>
+    </model>
+    <model name='free_marker_59'>
+      <link name='my_box'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.0001</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='my_box_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='my_box_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/bite_drive_between_targets/meshes/marker59.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>2.04 0 0 0 -0 0</pose>
+    </model>
+    <model name='target1'>
+      <link name='cube_base_link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 3e-05 0 -0 0</pose>
+          <mass>10.0005</mass>
+          <inertia>
+            <ixx>6.00025</ixx>
+            <ixy>0</ixy>
+            <ixz>2.03278e-25</ixz>
+            <iyy>6.00025</iyy>
+            <iyz>0</iyz>
+            <izz>6.0001</izz>
+          </inertia>
+        </inertial>
+        <collision name='cube_base_link_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1 1 0.001</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='cube_base_link_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/lizi-lab/catkin_ws/src/BITE_DROPBOX/bite_drive_between_targets/meshes/40x40CubeModelCenterOnOrigin.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='cube_base_link_fixed_joint_lump__cube_4x4_1_link_visual_1'>
+          <pose frame=''>0 -0.5 0.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='cube_base_link_fixed_joint_lump__cube_4x4_2_link_visual_2'>
+          <pose frame=''>-0.5 0 0.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='cube_base_link_fixed_joint_lump__cube_4x4_3_link_visual_3'>
+          <pose frame=''>0 0.5 0.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='cube_base_link_fixed_joint_lump__cube_4x4_4_link_visual_4'>
+          <pose frame=''>0.5 0 0.5 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='cube_base_link_fixed_joint_lump__cube_4x4_5_link_visual_5'>
+          <pose frame=''>0 0 1 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>0</static>
+      <plugin name='object_controller' filename='libgazebo_ros_planar_move.so'>
+        <commandTopic>cmd_vel</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <odometryRate>20.0</odometryRate>
+        <frameName>world</frameName>
+        <robotBaseFrame>cube_base_link</robotBaseFrame>
+        <robotNamespace>/</robotNamespace>
+      </plugin>
+      <pose frame=''>7 0 0 0 -0 0</pose>
+    </model>
+    <light name='user_point_light_4' type='point'>
+      <pose frame=''>9.14177 -0.073421 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <light name='user_point_light_5' type='point'>
+      <pose frame=''>6.60725 -0.898371 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <light name='user_point_light_6' type='point'>
+      <pose frame=''>6.0367 -1.86252 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+  </world>
+</sdf>

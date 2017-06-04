@@ -1,0 +1,32 @@
+digraph G {
+node [shape=box];
+"dummy_link" [label="dummy_link"];
+"Arm_base_link" [label="Arm_base_link"];
+"base_rotation_link" [label="base_rotation_link"];
+"shoulder_link" [label="shoulder_link"];
+"elbow1_link" [label="elbow1_link"];
+"elbow2_link" [label="elbow2_link"];
+"wrist_link" [label="wrist_link"];
+"Arm_Camera_link" [label="Arm_Camera_link"];
+"left_finger_link" [label="left_finger_link"];
+"right_finger_link" [label="right_finger_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"dummy_link" -> "dummy_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"dummy_joint" -> "Arm_base_link"
+"Arm_base_link" -> "base_rotation_joint" [label="xyz: -0.096278 0 0.0549 \nrpy: -5.4637e-16 1.34659e-15 -2.1923e-31"]
+"base_rotation_joint" -> "base_rotation_link"
+"base_rotation_link" -> "shoulder_joint" [label="xyz: 0 0 0.0835 \nrpy: -4.2016e-15 -5.9751e-16 9.93431e-15"]
+"shoulder_joint" -> "shoulder_link"
+"shoulder_link" -> "elbow1_joint" [label="xyz: 0 -0.000251156 0.266305 \nrpy: 1.44504e-15 1.11629e-06 -9.93431e-15"]
+"elbow1_joint" -> "elbow1_link"
+"elbow1_link" -> "elbow2_joint" [label="xyz: 0 0 0.224 \nrpy: -4.51049e-16 3.3587e-16 0"]
+"elbow2_joint" -> "elbow2_link"
+"elbow2_link" -> "wrist_joint" [label="xyz: 0.0137 0 0.24475 \nrpy: 0 -0 0"]
+"wrist_joint" -> "wrist_link"
+"wrist_link" -> "Arm_camera_joint" [label="xyz: -0.05525 0 0.034025 \nrpy: 0 -1.5708 0"]
+"Arm_camera_joint" -> "Arm_Camera_link"
+"wrist_link" -> "left_finger_joint" [label="xyz: -0.00025 0.021 0.04225 \nrpy: 2.8598e-15 1.01871e-16 3.19236e-21"]
+"left_finger_joint" -> "left_finger_link"
+"wrist_link" -> "right_finger_joint" [label="xyz: -0.00025 -0.021 0.04225 \nrpy: 0 3.19687e-37 0"]
+"right_finger_joint" -> "right_finger_link"
+}

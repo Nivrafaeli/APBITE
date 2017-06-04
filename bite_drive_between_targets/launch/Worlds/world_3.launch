@@ -1,0 +1,35 @@
+<launch>
+    <!--Obsticles - Ground markers spawn-->
+	<node name="spawn_urdf73" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/free_marker_73.urdf -urdf   -x 4.07 -y -0.0 -z 0 -Y 0 -model free_marker_73" />
+	<node name="spawn_urdf52" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/free_marker_52.urdf -urdf   -x 6.51 -y -0.0 -z 0 -Y 0 -model free_marker_52" />
+	<node name="spawn_urdf59" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/free_marker_59.urdf -urdf   -x 2.29 -y -0.0 -z 0 -Y 0 -model free_marker_59" />
+
+ <!--
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/free_marker_73.urdf -urdf   -x -8 -y -0.0 -z 0 -Y 0 -model free_marker_73" />
+    <node name="spawn_urdf52" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/free_marker_52.urdf -urdf -x 0.5 -y 2.5 -z 0 -Y 0 -model free_marker_52" />
+    <node name="spawn_urdf59" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/free_marker_59.urdf -urdf -x 2.5 -y  2 -z 0 -Y 0 -model free_marker_59" />
+    <node name="spawn_urdf70" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/free_marker_70.urdf -urdf -x 2  -y  0 -z 0 -Y 0 -model free_marker_70" />
+-->
+
+    <!-- *** Target 1 ***-->
+    <!-- send table urdf to param server -->
+    <node name="spawn_target1" pkg="gazebo_ros" type="spawn_model"  args="-file $(find bite_drive_between_targets)/urdf/target1.urdf -urdf -x 9.5 -y 0 -z 0 -Y 0 -model target1" />
+    <!-- Static transforms between markers and the target location (on the ground, at the center of the cube) -->
+    <arg name="target1_front_marker_name" default="4x4_4"/>
+    <arg name="target1_right_marker_name" default="4x4_1"/>
+    <arg name="target1_rear_marker_name" default="4x4_2"/>
+    <arg name="target1_left_marker_name" default="4x4_3"/>
+    <arg name="target1_top_marker_name" default="4x4_5"/>
+    <!--node pkg="tf" type="static_transform_publisher" name="target1_front_marker_to_base_link" args="0 -0.5 -0.5 -1.57 -1.57 0 $(arg target1_front_marker_name) target1_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_right_marker_base_link" args="0 -0.5 -0.5 0 0 -1.57 $(arg target1_right_marker_name) target1_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_rear_marker_base_link" args= "0 -0.5 -0.5 -1.57 1.57 3.14 $(arg target1_rear_marker_name) target1_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_left_marker_base_link" args= "0 -0.5 -0.5 0 3.14 -1.57 $(arg target1_left_marker_name) target1_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_top_marker_base_link" args=  "0 0 -1 0 0 0 $(arg target1_top_marker_name) target1_base_link 100"/-->
+
+    <node pkg="tf" type="static_transform_publisher" name="target1_front_marker_to_base_link" args="0 -0.5 -0.5 -1.57 -1.57 0 $(arg target1_front_marker_name) target1_front_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_right_marker_base_link" args="0 -0.5 -0.5 0 0 -1.57 $(arg target1_right_marker_name) target1_right_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_rear_marker_base_link" args= "0 -0.5 -0.5 -1.57 1.57 3.14 $(arg target1_rear_marker_name) target1_rear_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_left_marker_base_link" args= "0 -0.5 -0.5 0 3.14 -1.57 $(arg target1_left_marker_name) target1_left_base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="target1_top_marker_base_link" args=  "0 0 -1 0 0 0 $(arg target1_top_marker_name) target1_top_base_link 100"/>
+
+</launch>

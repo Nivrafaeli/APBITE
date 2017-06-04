@@ -1,0 +1,8 @@
+node	 action
+initiate	Start
+initiate	Terminate
+Choose_target	Start
+Choose_target	Terminate
+search_target	Start
+search_target	Terminate
+go_to_target	Start

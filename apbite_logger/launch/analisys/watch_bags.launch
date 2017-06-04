@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="rosbag" type="play" name="rosbag" args="-d 2 /home/lizi-lab/storage/apbite_experiments/batch5_bags/b5_exp_w2_s3_opt.bag.active"/>
+     <include file="$(find ric_gazebo)/launch/lizi_gazebo.launch"> </include>
+    <!--include file="$(find ric_gazebo)/launch/lizi_rviz.launch"></include-->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find bite_drive_between_targets)/rvizconfig/drivebetween.rviz"/>
+</launch>

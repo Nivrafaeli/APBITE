@@ -1,0 +1,16 @@
+<launch>
+  <node name="bite_r0_allocate_node" pkg="bite_sample" type="Allocate.py" args="r0" />
+  <node name="bite_r0_vote_node" pkg="bite_sample" type="Vote.py" args="r0" />
+  <node name="bite_r0_knowledgebase_node" pkg="bite" type="KnowledgeBase.py" args="bite_sample r0" output="screen" />
+  <node name="bite_r0_main_node" pkg="bite" type="BITE.py" args="bite_sample r0 r0,r1,r2" output="screen" />
+
+  <node name="bite_r1_allocate_node" pkg="bite_sample" type="Allocate.py" args="r1" />
+  <node name="bite_r1_vote_node" pkg="bite_sample" type="Vote.py" args="r1" />
+  <node name="bite_r1_knowledgebase_node" pkg="bite" type="KnowledgeBase.py" args="bite_sample r1" />
+  <node name="bite_r1_main_node" pkg="bite" type="BITE.py" args="bite_sample r1 r0,r1,r2" />
+
+  <node name="bite_r2_allocate_node" pkg="bite_sample" type="Allocate.py" args="r2" />
+  <node name="bite_r2_vote_node" pkg="bite_sample" type="Vote.py" args="r2" />
+  <node name="bite_r2_knowledgebase_node" pkg="bite" type="KnowledgeBase.py" args="bite_sample r2" />
+  <node name="bite_r2_main_node" pkg="bite" type="BITE.py" args="bite_sample r2 r0,r1,r2" />
+</launch>
